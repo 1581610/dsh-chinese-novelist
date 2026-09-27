@@ -174,7 +174,7 @@ export function apply(ctx: Context): void {
 - `list()` — 递归扫描 `skills/` 树，返回所有候选技能
 - `get(candidate)` — 按需返回某个 `SKILL.md` 的完整正文
 
-**递归扫描**意味着嵌套子技能也能被发现（上游 reverse-skill 用同一机制一次注册了 87 个技能）。本仓库目前只有 1 个 `SKILL.md`，所以注册 1 个技能。
+**递归扫描**意味着嵌套子技能也能被发现。本仓库目前只有 1 个 `SKILL.md`，所以注册 1 个技能；若日后在 `skills/` 下新增子目录并各放一份 `SKILL.md`，会自动一起注册，无需改动 provider 代码。
 
 ### 三处适配改动
 
@@ -207,10 +207,6 @@ export function apply(ctx: Context): void {
 - **[PenglongHuang/chinese-novelist-skill](https://github.com/PenglongHuang/chinese-novelist-skill)** — 中文小说创作 skill，3.2k★，MIT License，Copyright (c) 2026 PenglongHuang
 
 创作方法论、三层问答设计、18 篇技法文档、字数校验脚本均来自上游作者。请给原作者点星。
-
-参考的封装实现：
-
-- **[dhicoc/dsh-reverse-skill](https://github.com/dhicoc/dsh-reverse-skill)** — 把 skill 包封装为 DSH Cordis 插件的范例，本仓库的 provider 代码即基于其实现改写。
 
 ---
 
