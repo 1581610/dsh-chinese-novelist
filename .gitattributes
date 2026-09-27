@@ -1,0 +1,15 @@
+# 强制 LF 换行，避免 Windows CRLF 影响 SKILL.md 解析与 JS 源码
+* text=auto eol=lf
+
+# 明确文本类型
+*.md   text eol=lf
+*.js   text eol=lf
+*.ts   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.py   text eol=lf
+
+# 二进制
+*.png binary
+*.jpg binary
+*.gif binary

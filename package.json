@@ -1,0 +1,41 @@
+{
+  "name": "dsh-chinese-novelist",
+  "description": "Chinese novelist skill pack as a DeepSeek Harness Cordis plugin — long-form chaptered fiction writing with auto-validation.",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-skill",
+    "cordis",
+    "chinese-novelist",
+    "fiction",
+    "writing"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-skill": "^0.0.1-rc.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
